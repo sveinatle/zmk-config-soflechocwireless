@@ -81,9 +81,9 @@
 //               |SUPER| ALT | CTRL |  R   | none |         | none  |SPACE | ENTER | BACKSP |  DEL |
         bindings = <
 &none      &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                                 &kp N6           &kp N7         &kp N8         &kp N9        &kp N0             &none
-&none      &kp P  &kp X    &kp H    &kp G     &kp J                                  &ht HASH AT      &ht DOT COLON  &ht FSLH STAR  &ht DQT EXCL  &ht SQT QUESTION   &none
+&none      &kp P  &kp X    &kp H    &kp G     &kp J                                  &kp HASH       &kp DOT   &kp FSLH   &kp DQT   &kp SQT    &none
 &kp LSHIFT &kp C  &kp S    &kp N    &kp T     &kp K                                  &kp COMMA        &kp A          &kp E          &kp I         &kp M              &kp RSHIFT
-&none      &kp B  &kp F    &kp L    &kp D     &kp V  &kp C_MUTE    &ext_power EP_TOG &ht MINUS PLUS   &kp U          &kp O          &kp Y         &kp W              &none
+&none      &kp B  &kp F    &kp L    &kp D     &kp V  &kp C_MUTE    &ext_power EP_TOG &kp MINUS    &kp U          &kp O          &kp Y         &kp W              &none
                   &kp LGUI &kp LALT &kp LCTRL &kp R  &none         &none             &kp SPACE        &kp RET        &kp BSPC       &kp DEL
         >;
 
