@@ -76,14 +76,22 @@
     };
 
     behaviors {
-        hold_tap_tap_pref: hold_tap_tap_pref {
+        ht_tp_layers: ht_tp_layers {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_TAP_PREF";
+            label = "HT_TP_LAYERS";
             bindings = <&to>, <&sl>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+        };
+
+        quotes: quotes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTES";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp DOUBLE_QUOTES>, <&kp GRAVE>;
         };
     };
 
@@ -99,11 +107,11 @@
             //               |SUPER| ALT | CTRL |  R   | none |         | none  |SPACE | ENTER | BACKSP |  DEL |
 
             bindings = <
-&none       &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                               &kp N6     &kp N7     &kp N8    &kp N9   &kp N0   &none
-&none       &kp P   &kp X     &kp H     &kp G      &kp J                                                &kp HASH   &kp DOT    &kp FSLH  &kp DQT  &kp SQT  &none
-&kp LSHIFT  &kp C   &kp S     &kp N     &kp T      &kp K                                                &kp COMMA  &kp A      &kp E     &kp I    &kp M    &kp RSHIFT
-&none       &kp B   &kp F     &kp L     &kp D      &kp V   &kp C_MUTE                &ext_power EP_TOG  &kp MINUS  &kp U      &kp O     &kp Y    &kp W    &none
-                    &kp LGUI  &kp LALT  &kp LCTRL  &kp R   &hold_tap_tap_pref 1 1    &none              &kp SPACE  &kp ENTER  &kp BSPC  &kp DEL
+&none       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                          &kp N6     &kp N7     &kp N8     &kp N9   &kp N0   &none
+&none       &kp P   &kp X   &kp H   &kp G   &kp J                                           &kp SLASH  &kp DOT    &kp COMMA  &quotes  &kp SQT  &none
+&kp LSHIFT  &kp C   &kp S   &kp N   &kp T   &kp K                                           &kp ENTER  &kp A      &kp E      &kp I    &kp M    &kp RSHIFT
+&none       &kp B   &kp F   &kp L   &kp D   &kp V   &kp C_MUTE           &ext_power EP_TOG  &kp MINUS  &kp U      &kp O      &kp Y    &kp W    &none
+                    &none   &none   &none   &kp R   &ht_tp_layers 1 1    &none              &kp SPACE  &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -111,11 +119,21 @@
 
         sym_num {
             bindings = <
-&none  &none  &none  &none  &none  &none                  &none          &none   &kp FSLH   &kp STAR  &none      &none
-&none  &none  &none  &none  &none  &none                  &none          &kp N7  &kp N8     &kp N9    &kp MINUS  &none
-&none  &none  &none  &none  &none  &none                  &mt RPAR LPAR  &kp N4  &kp N0     &kp N6    &kp PLUS   &none
-&none  &none  &none  &none  &none  &none  &none    &none  &kp ENTER      &kp N1  &kp N2     &kp N3    &none      &none
-              &none  &none  &none  &none  &to 0    &none  &none          &kp N0  &kp COMMA  &kp DOT
+&none  &none  &none  &none  &none  &none                  &none  &none   &kp FSLH   &kp STAR  &none      &none
+&none  &none  &none  &none  &none  &none                  &none  &kp N7  &kp N8     &kp N9    &kp MINUS  &none
+&none  &none  &none  &none  &none  &none                  &none  &kp N4  &kp N0     &kp N6    &kp PLUS   &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &kp N1  &kp N2     &kp N3    &none      &none
+              &none  &none  &none  &none  &to 0    &sl 2  &none  &kp N0  &kp COMMA  &kp DOT
+            >;
+        };
+
+        prog {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp RPAR  &kp LPAR   &none   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp GT    &kp EQUAL  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans     &trans
             >;
         };
     };
