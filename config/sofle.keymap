@@ -177,11 +177,11 @@
 
         edit {
             bindings = <
-&trans  &trans  &trans        &trans      &trans     &trans                    &trans  &trans         &trans     &trans     &trans     &trans
-&trans  &trans  &trans        &trans      &trans     &trans                    &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &trans  &kp LEFT_ALT  &kp LSHIFT  &kp LCTRL  &trans                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans  &trans        &trans      &kp LC(D)  &trans  &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
-                &trans        &trans      &trans     &trans  &trans    &trans  &trans  &trans         &trans     &trans
+&trans  &trans        &trans        &trans           &trans       &trans                    &trans  &trans         &trans     &trans     &trans     &trans
+&trans  &trans        &trans        &kp LS(LA(TAB))  &kp LA(TAB)  &trans                    &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LSHIFT       &kp LCTRL    &trans                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans        &trans        &trans           &kp LC(D)    &trans  &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
+                      &trans        &trans           &trans       &trans  &trans    &trans  &trans  &trans         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
@@ -189,11 +189,11 @@
 
         winnav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans           &trans       &trans  &kp LEFT_WIN    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
