@@ -181,11 +181,11 @@
 
         sym_num {
             bindings = <
-&none  &none  &none      &none            &none          &none                     &none              &none   &none   &none   &none      &none
-&none  &none  &kp LBRC   &mt CARET LBKT   &mt DLLR RBKT  &kp RBRC                  &kp AMPS           &kp N7  &kp N8  &kp N9  &kp GRAVE  &none
-&none  &none  &kp EQUAL  &mt UNDER MINUS  &kp COLON      &kp PLUS                  &kp PIPE           &kp N4  &kp N5  &kp N6  &kp SEMI   &none
-&none  &none  &kp LT     &mt BSLH FSLH    &kp GT         &kp STAR  &none    &none  &mt EXCL QUESTION  &kp N1  &kp N2  &kp N3  &kp HASH   &none
-              &none      &none            &none          &none     &to 0    &sl 0  &kp N0             &none   &none   &none
+&none  &none  &none      &none            &none              &none                     &none              &none   &none   &none   &none      &none
+&none  &none  &kp LBRC   &mt CARET LBKT   &mt DLLR RBKT      &kp RBRC                  &kp AMPS           &kp N7  &kp N8  &kp N9  &kp GRAVE  &none
+&none  &none  &kp EQUAL  &mt UNDER MINUS  &mt PERCENT COLON  &kp PLUS                  &kp PIPE           &kp N4  &kp N5  &kp N6  &kp SEMI   &none
+&none  &none  &mt AT LT  &mt BSLH FSLH    &mt TILDE GT       &kp STAR  &none    &none  &mt EXCL QUESTION  &kp N1  &kp N2  &kp N3  &kp HASH   &none
+              &none      &none            &none              &none     &to 0    &sl 0  &kp N0             &none   &none   &none
             >;
         };
 
