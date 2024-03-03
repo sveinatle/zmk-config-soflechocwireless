@@ -89,9 +89,9 @@
     };
 
     behaviors {
-        ht_tp_layers: ht_tp_layers {
+        ht_tp_tapsl_holdto: ht_tp_tapsl_holdto {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_TP_LAYERS";
+            label = "HT_TP_TAPSL_HOLDTO";
             bindings = <&to>, <&sl>;
 
             #binding-cells = <2>;
@@ -110,16 +110,16 @@
         ht_hpidle_key_layer: ht_hpidle_key_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_HPIDLE_KEY_LAYER";
-            bindings = <&mo>, <&kp>;
+            bindings = <&ht_tp_tapsl_holdto>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             require-prior-idle-ms = <100>;
         };
 
-        ht_hp_tapsk: ht_hp_tapsk {
+        ht_hp_tapsk_holdkp: ht_hp_tapsk_holdkp {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_HP_TAPSK";
+            label = "HT_HP_TAPSK_HOLDKP";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
@@ -169,11 +169,11 @@
             //               |SUPER| ALT | CTRL |  R   | none |         | none  |SPACE | ENTER | BACKSP |  DEL |
 
             bindings = <
-&none  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                            &kp N6                        &kp N7   &kp N8     &kp N9   &kp N0       &none
-&none  &kp P   &kp X   &kp H   &kp G    &kp J                                             &kp SLASH                     &kp DOT  &kp COMMA  &ak_par  &mt SQT DQT  &none
-&none  &kp C   &kp S   &kp N   &kp T    &kp K                                             &kp ENTER                     &kp A    &kp E      &kp I    &kp M        &none
-&none  &kp B   &kp F   &kp L   &kp D    &kp V    &kp C_MUTE           &ext_power EP_TOG   &kp MINUS                     &kp U    &kp O      &kp Y    &kp W        &none
-               &none   &none   &kp ESC  &lt 4 R  &ht_tp_layers 1 1    &mt LEFT_SHIFT TAB  &ht_hpidle_key_layer 3 SPACE  &trans   &none      &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                                  &kp N6                        &kp N7   &kp N8     &kp N9   &kp N0       &none
+&none  &kp P   &kp X   &kp H   &kp G    &kp J                                                   &kp SLASH                     &kp DOT  &kp COMMA  &ak_par  &mt SQT DQT  &none
+&none  &kp C   &kp S   &kp N   &kp T    &kp K                                                   &kp ENTER                     &kp A    &kp E      &kp I    &kp M        &none
+&none  &kp B   &kp F   &kp L   &kp D    &kp V    &kp C_MUTE                 &ext_power EP_TOG   &kp MINUS                     &kp U    &kp O      &kp Y    &kp W        &none
+               &none   &none   &kp ESC  &lt 4 R  &ht_tp_tapsl_holdto 1 1    &mt LEFT_SHIFT TAB  &ht_hpidle_key_layer 3 SPACE  &trans   &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -201,11 +201,11 @@
 
         edit {
             bindings = <
-&trans  &trans                  &trans                  &trans                    &trans                    &trans                    &trans  &trans         &trans     &trans     &trans     &trans
-&trans  &trans                  &trans                  &key_repeat               &trans                    &trans                    &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &ht_hp_tapsk LWIN LWIN  &ht_hp_tapsk LALT LALT  &ht_hp_tapsk LSHFT LSHFT  &ht_hp_tapsk LCTRL LCTRL  &trans                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans                  &trans                  &trans                    &kp LC(D)                 &trans  &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
-                                &trans                  &trans                    &trans                    &trans  &trans    &trans  &trans  &trans         &trans     &trans
+&trans  &trans                         &trans                         &trans                           &trans                           &trans                    &trans  &trans         &trans     &trans     &trans     &trans
+&trans  &trans                         &trans                         &key_repeat                      &trans                           &trans                    &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &ht_hp_tapsk_holdkp LWIN LWIN  &ht_hp_tapsk_holdkp LALT LALT  &ht_hp_tapsk_holdkp LSHFT LSHFT  &ht_hp_tapsk_holdkp LCTRL LCTRL  &trans                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans                         &trans                         &trans                           &kp LC(D)                        &trans  &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
+                                       &trans                         &trans                           &trans                           &trans  &trans    &trans  &trans  &trans         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
