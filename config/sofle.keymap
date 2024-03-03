@@ -71,6 +71,21 @@
             bindings = <&kp Q>;
             key-positions = <14 15>;
         };
+
+        nor_ae {
+            bindings = <&nor_ae>;
+            key-positions = <19 20>;
+        };
+
+        nor_aa {
+            bindings = <&nor_aa>;
+            key-positions = <31 32>;
+        };
+
+        nor_oe {
+            bindings = <&nor_oe>;
+            key-positions = <32 33>;
+        };
     };
 
     behaviors {
@@ -198,12 +213,14 @@
 
         winnav {
             bindings = <
-&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &trans       &trans           &trans   &trans  &trans
-&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &nor_aa      &nor_oe          &nor_ae  &trans  &trans
-&trans  &trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans                          &trans  &kp LA(TAB)  &kp LS(LA(TAB))  &trans   &trans  &trans
-&trans  &trans  &trans  &trans           &trans       &trans  &trans          &trans  &trans  &trans       &trans           &trans   &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &trans       &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans                          &trans  &trans       &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans                          &trans  &kp LA(TAB)  &kp LS(LA(TAB))  &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans       &trans  &trans          &trans  &trans  &trans       &trans           &trans  &trans  &trans
                 &trans  &trans           &trans       &trans  &kp LEFT_WIN    &trans  &trans  &trans       &trans           &trans
             >;
+
+            label = "winnav";
         };
     };
 };
