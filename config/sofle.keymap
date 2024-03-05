@@ -218,11 +218,11 @@
 
         edit {
             bindings = <
-&trans  &trans                         &trans                         &trans                           &trans                           &trans                    &trans  &trans         &trans     &trans     &trans     &trans
-&trans  &trans                         &kp K_REDO                     &key_repeat                      &kp K_UNDO                       &trans                    &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &ht_hp_tapsk_holdkp LWIN LWIN  &ht_hp_tapsk_holdkp LALT LALT  &ht_hp_tapsk_holdkp LSHFT LSHFT  &ht_hp_tapsk_holdkp LCTRL LCTRL  &trans                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans                         &trans                         &trans                           &kp LC(D)                        &trans  &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
-                                       &trans                         &trans                           &trans                           &trans  &trans    &trans  &trans  &trans         &trans     &trans
+&trans  &trans                         &trans                         &trans                           &trans                           &trans                         &trans  &trans         &trans     &trans     &trans     &trans
+&trans  &trans                         &kp K_REDO                     &key_repeat                      &kp K_UNDO                       &trans                         &trans  &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &ht_hp_tapsk_holdkp LWIN LWIN  &ht_hp_tapsk_holdkp LALT LALT  &ht_hp_tapsk_holdkp LSHFT LSHFT  &ht_hp_tapsk_holdkp LCTRL LCTRL  &kp K_PASTE                    &trans  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans                         &kp K_CUT                      &kp K_COPY                       &kp LC(D)                        &trans       &trans    &trans  &trans  &kp BACKSPACE  &trans     &trans     &kp DEL    &trans
+                                       &trans                         &trans                           &trans                           &trans       &trans    &trans  &trans  &trans         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>, <&inc_dec_kp UP DOWN>;
