@@ -178,13 +178,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  none |  1  |  2  |  3  |  4   |  5   |                        |  6   |  7    |  8     |  9   |   0  | none |
-            // |  none |  P  |  X  |  H  |  G   |  J   |                        | #@   | .:    | /*     | "!   |  '?  | none |
-            // | SHIFT |  C  |  S  |  N  |  T   |  K   |                        |  ,   |  A    |  E     |  I   |  M   |SHIFT |
-            // |  none |  B  |  F  |  L  |  D   |  V   | MUTE |         |EP_TOG |  -   |  U    |  O     |  Y   |  W   | none |
-            //               |SUPER| ALT | CTRL |  R   | none |         | none  |SPACE | ENTER | BACKSP |  DEL |
-
             bindings = <
 &none  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                                  &kp N6                           &kp N7   &kp N8     &kp N9   &kp N0       &none
 &none  &kp P   &kp X   &kp H   &kp G    &kp J                                                   &kp SLASH                        &kp DOT  &kp COMMA  &ak_par  &mt SQT DQT  &none
